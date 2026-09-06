@@ -1,4 +1,4 @@
-﻿/* ════════════════════════════════════════════
+/* ════════════════════════════════════════════
    Mohammad Aman Portfolio — style.css
    ════════════════════════════════════════════ */
 
@@ -492,6 +492,83 @@ img { display: block; max-width: 100%; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
 }
 
+
 @media (max-width: 400px) {
   .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Skills ───────────────────────────────── */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skill-category {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 32px;
+  transition: border-color .2s;
+}
+.skill-category:hover { border-color: rgba(255,255,255,.18); }
+
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.skill-category-icon { font-size: 1.3rem; }
+
+.skill-category-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: .02em;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.05);
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: .02em;
+  transition: background .2s, border-color .2s, transform .15s;
+  cursor: default;
+}
+.skill-pill:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.22);
+  transform: translateY(-2px);
+}
+
+.skill-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.skill-icon--invert { filter: invert(1); }
+
+@media (max-width: 600px) {
+  .skill-category { padding: 20px; }
+  .skill-pill { font-size: .78rem; padding: 6px 13px; }
 }
