@@ -126,6 +126,7 @@ img { display: block; max-width: 100%; }
   border-top: 1px solid var(--border);
   padding: 16px 24px;
   gap: 12px;
+  width: 18%;
 }
 .mobile-menu a {
   color: var(--text);
