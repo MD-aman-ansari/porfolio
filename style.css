@@ -122,7 +122,7 @@ img { display: block; max-width: 100%; }
 .mobile-menu {
   display: flex;
   flex-direction: column;
-  /* background: rgba(0,0,0,.95); */
+  background: rgba(0,0,0,.95);
   border-top: 1px solid var(--border);
   padding: 16px 24px;
   gap: 12px;
@@ -134,7 +134,7 @@ img { display: block; max-width: 100%; }
   font-size: 1rem;
   font-weight: 500;
   padding: 8px 0;
-  /* border-bottom: 1px solid var(--border); */
+  border-bottom: 1px solid var(--border);
 }
 .mobile-menu a:last-child { border-bottom: none; }
 
@@ -161,8 +161,8 @@ img { display: block; max-width: 100%; }
   position: absolute;
   border-radius: 50%;
   border: 1px solid var(--ring-color);
-  top: 50%;
-  left: 50%;
+  top: 100%;
+  left: 100%;
   translate: -50% -50%;
   animation: ring-pulse 8s ease-in-out infinite;
 }
@@ -179,7 +179,7 @@ img { display: block; max-width: 100%; }
 .dots-grid {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgb(233, 233, 233) 1px, transparent 1px);
   background-size: 32px 32px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 70%);
 }
