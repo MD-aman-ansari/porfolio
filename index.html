@@ -17,31 +17,114 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="logo-link" aria-label="Mohammad Aman Home">
-        <img src="logo.png" alt="Mohammad Aman logo" class="logo-img" width="100px" height="100px" />
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about" class="nav-btn">About me</a>
-        <a href="#contact" class="nav-btn nav-btn--outline">Contact</a>
-      </nav>
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobile-menu" hidden>
-      <a href="#about">About me</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <!-- MOBILE TOPBAR -->
+  <header class="mobile-topbar" id="mobile-topbar">
+    <a href="#home" class="mobile-logo-link" aria-label="Mohammad Aman Home">
+      <img src="logo.png" alt="Mohammad Aman logo" class="mobile-logo-img" width="38" height="38" />
+      <span class="mobile-logo-text">Mohd. Aman</span>
+    </a>
+    <button class="hamburger" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar navigation">
+    <div class="sidebar-header">
+      <a href="#home" class="sidebar-logo" aria-label="Mohammad Aman Home">
+        <img src="logo.png" alt="Mohammad Aman logo" class="sidebar-logo-img" width="42" height="42" />
+        <div class="sidebar-brand-text">
+          <span class="brand-name">Mohd. Aman</span>
+          <span class="brand-role">Software Developer</span>
+        </div>
+      </a>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Primary navigation">
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#home" class="sidebar-link active" data-nav-link title="Home">
+            <span class="sidebar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </span>
+            <span class="sidebar-label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="sidebar-link" data-nav-link title="About Me">
+            <span class="sidebar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <span class="sidebar-label">About Me</span>
+          </a>
+        </li>
+        <li>
+          <a href="#experience" class="sidebar-link" data-nav-link title="Experience">
+            <span class="sidebar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </span>
+            <span class="sidebar-label">Experience</span>
+          </a>
+        </li>
+        <li>
+          <a href="#skills" class="sidebar-link" data-nav-link title="Skills">
+            <span class="sidebar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </span>
+            <span class="sidebar-label">Skills</span>
+          </a>
+        </li>
+        <li>
+          <a href="#projects" class="sidebar-link" data-nav-link title="Projects">
+            <span class="sidebar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+              </svg>
+            </span>
+            <span class="sidebar-label">Projects</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="sidebar-link" data-nav-link title="Contact">
+            <span class="sidebar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+            <span class="sidebar-label">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#contact" class="sidebar-status-card" aria-label="Available for work">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="sidebar-label status-text">Available for work</span>
+      </a>
+    </div>
+  </aside>
 
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-bg" aria-hidden="true">
+      <div class="hero-glow"></div>
       <div class="ring ring-1"></div>
       <div class="ring ring-2"></div>
       <div class="ring ring-3"></div>
